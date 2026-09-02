@@ -263,8 +263,9 @@
   .bonus-toggle .pdf-note{padding:0 0 12px;font-size:13.5px;color:var(--ink);font-weight:700;}
 
   /* ---------- Depoimentos (dobra 7) ---------- */
-  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px;}
-  @media(min-width:640px){ .testi-grid{grid-template-columns:repeat(3,1fr);} }
+  .testi-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px;max-width:420px;margin-left:auto;margin-right:auto;}
+  @media(min-width:640px){ .testi-grid{grid-template-columns:repeat(2,1fr);max-width:none;} }
+  @media(min-width:900px){ .testi-grid{grid-template-columns:repeat(3,1fr);} }
   .testi-grid img{
     width:100%;height:auto;display:block;border-radius:var(--radius-m);
     box-shadow:var(--shadow-s);border:1px solid var(--line);
@@ -346,11 +347,6 @@
   .logo-card--dark .logo-caption span{color:#B9BAD0;}
 
   /* ---------- Oferta / preço ---------- */
-  .price-block{
-    margin:30px auto 0;max-width:480px;text-align:center;
-    background:var(--green-tint);border-radius:var(--radius-l);
-    padding:clamp(28px,6vw,42px);box-shadow:var(--shadow-m);
-  }
   .price-was{font-size:16px;color:var(--ink-soft);margin-bottom:8px;}
   .price-was s{color:var(--coral-deep);}
   .price-hero{display:flex;flex-direction:column;align-items:center;gap:0;margin-bottom:12px;}
@@ -369,6 +365,26 @@
     background:var(--paper);border-radius:var(--radius-m);
     padding:14px 18px;box-shadow:var(--shadow-s);
   }
+
+  /* ---------- Cartão de oferta (preço + CTA unificados) ---------- */
+  .offer-card{
+    margin:30px auto 0;max-width:420px;text-align:center;
+    background:var(--paper);border-radius:var(--radius-l);
+    border:1px solid var(--line);box-shadow:var(--shadow-m);
+    overflow:hidden;
+  }
+  .offer-card-price{padding:26px 26px 22px;}
+  .offer-card-divider{border-top:2px dashed var(--line);margin:0 24px;}
+  .offer-card-action{background:var(--cream);padding:22px 24px 26px;}
+  .offer-card-action .btn-cta{width:100%;}
+  .offer-card-action .cta-wrap{margin-top:0;}
+  .offer-card-action .secure-seal{margin-top:16px;}
+  .offer-card-action .secure-seal img{box-shadow:none;}
+  .offer-card-action .cta-note{margin-top:10px;}
+  .offer-card .price-was{color:var(--ink-soft);}
+  .offer-card .price-or{color:var(--ink-faint);}
+  .offer-card .price-alt{color:var(--ink-soft);}
+  .offer-card .cta-note{color:var(--ink-faint);}
 
   /* ---------- Garantia ---------- */
   .guarantee-card{
@@ -443,13 +459,6 @@
   .closing p{color:#DDEAF2;}
   .closing .quote-card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);}
   .closing .quote-card p{color:var(--yellow);}
-  .price-mini{
-    display:inline-block;margin:8px auto 26px;
-    background:var(--green-tint);border-radius:var(--radius-l);
-    padding:16px 28px;box-shadow:var(--shadow-m);
-  }
-  .price-mini-value{display:block;font-family:"Baloo 2",sans-serif;font-weight:800;color:var(--green-deep);font-size:clamp(28px,6vw,38px);line-height:1.1;}
-  .price-mini-alt{display:block;font-size:14px;color:var(--ink-soft);margin-top:4px;}
   .closing .check-list{max-width:280px;margin:0 auto 24px;text-align:left;}
 
   /* ---------- Sticky CTA mobile ---------- */
@@ -791,19 +800,23 @@
       <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Acesso imediato e vitalício</span></div>
     </div>
 
-    <div class="price-block">
-      <p class="price-was">Valor antigo: <s>R$ 299,00</s></p>
-      <div class="price-hero">
-        <span class="price-hero-top">Hoje por:</span>
-        <span class="price-hero-value">12x R$10,03</span>
+    <div class="offer-card">
+      <div class="offer-card-price">
+        <p class="price-was">Valor antigo: <s>R$ 299,00</s></p>
+        <div class="price-hero">
+          <span class="price-hero-top">Hoje por:</span>
+          <span class="price-hero-value">12x R$10,03</span>
+        </div>
+        <p class="price-or">Ou</p>
+        <p class="price-alt"><strong>R$ 97</strong> à vista</p>
       </div>
-      <p class="price-or">Ou</p>
-      <p class="price-alt"><strong>R$ 97</strong> à vista</p>
+      <div class="offer-card-divider"></div>
+      <div class="offer-card-action">
+        <div class="cta-wrap"><a href="https://checkout.payt.com.br/aaa58b42aa6473d9c637ff7b37ededed" class="btn-cta">QUERO ESTAR PREPARADA PARA QUALQUER TURMA</a></div>
+        <div class="secure-seal"><img src="Fotos/selo-compra-segura.webp" alt="Compra segura, satisfação garantida, privacidade protegida" loading="lazy"></div>
+        <p class="cta-note">Acesso liberado imediatamente após a confirmação do pagamento.</p>
+      </div>
     </div>
-
-    <div class="cta-wrap"><a href="https://checkout.payt.com.br/aaa58b42aa6473d9c637ff7b37ededed" class="btn-cta">QUERO ESTAR PREPARADA PARA QUALQUER TURMA</a></div>
-    <div class="secure-seal"><img src="Fotos/selo-compra-segura.webp" alt="Compra segura, satisfação garantida, privacidade protegida" loading="lazy"></div>
-    <p class="cta-note">Acesso liberado imediatamente após a confirmação do pagamento.</p>
   </div>
 </section>
 
@@ -906,19 +919,23 @@
       <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Acesso vitalício</span></div>
     </div>
 
-    <div class="price-block">
-      <p class="price-was">Valor antigo: <s>R$ 299,00</s></p>
-      <div class="price-hero">
-        <span class="price-hero-top">Hoje por:</span>
-        <span class="price-hero-value">12x R$10,03</span>
+    <div class="offer-card">
+      <div class="offer-card-price">
+        <p class="price-was">Valor antigo: <s>R$ 299,00</s></p>
+        <div class="price-hero">
+          <span class="price-hero-top">Hoje por:</span>
+          <span class="price-hero-value">12x R$10,03</span>
+        </div>
+        <p class="price-or">Ou</p>
+        <p class="price-alt"><strong>R$ 97</strong> à vista</p>
       </div>
-      <p class="price-or">Ou</p>
-      <p class="price-alt"><strong>R$ 97</strong> à vista</p>
+      <div class="offer-card-divider"></div>
+      <div class="offer-card-action">
+        <div class="cta-wrap"><a href="https://checkout.payt.com.br/aaa58b42aa6473d9c637ff7b37ededed" class="btn-cta">QUERO ME PREPARAR PARA QUALQUER TURMA</a></div>
+        <div class="secure-seal"><img src="Fotos/selo-compra-segura.webp" alt="Compra segura, satisfação garantida, privacidade protegida" loading="lazy"></div>
+        <p class="cta-note">🔒 7 dias de garantia</p>
+      </div>
     </div>
-
-    <div class="cta-wrap"><a href="https://checkout.payt.com.br/aaa58b42aa6473d9c637ff7b37ededed" class="btn-cta">QUERO ME PREPARAR PARA QUALQUER TURMA</a></div>
-    <div class="secure-seal"><img src="Fotos/selo-compra-segura.webp" alt="Compra segura, satisfação garantida, privacidade protegida" loading="lazy"></div>
-    <p class="cta-note">🔒 7 dias de garantia</p>
   </div>
 </section>
 
@@ -1007,19 +1024,29 @@
     </figure>
 
     <h3 style="color:var(--paper);">Guia do Comportamento na Sala de Aula</h3>
-    <div class="price-mini">
-      <span class="price-mini-value">R$ 97 à vista</span>
-      <span class="price-mini-alt">ou 12x de R$ 10,03</span>
-    </div>
 
-    <div class="check-list">
+    <div class="check-list" style="max-width:280px;margin:0 auto 8px;text-align:left;">
       <div class="check-item" style="color:var(--paper);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Acesso imediato</span></div>
       <div class="check-item" style="color:var(--paper);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Acesso vitalício</span></div>
       <div class="check-item" style="color:var(--paper);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>7 dias de garantia</span></div>
     </div>
 
-    <div class="cta-wrap"><a href="https://checkout.payt.com.br/aaa58b42aa6473d9c637ff7b37ededed" class="btn-cta">QUERO ESTAR PREPARADA PARA QUALQUER TURMA</a></div>
-    <div class="secure-seal"><img src="Fotos/selo-compra-segura.webp" alt="Compra segura, satisfação garantida, privacidade protegida" loading="lazy"></div>
+    <div class="offer-card">
+      <div class="offer-card-price">
+        <p class="price-was">Valor antigo: <s>R$ 299,00</s></p>
+        <div class="price-hero">
+          <span class="price-hero-top">Hoje por:</span>
+          <span class="price-hero-value">12x R$10,03</span>
+        </div>
+        <p class="price-or">Ou</p>
+        <p class="price-alt"><strong>R$ 97</strong> à vista</p>
+      </div>
+      <div class="offer-card-divider"></div>
+      <div class="offer-card-action">
+        <div class="cta-wrap"><a href="https://checkout.payt.com.br/aaa58b42aa6473d9c637ff7b37ededed" class="btn-cta">QUERO ESTAR PREPARADA PARA QUALQUER TURMA</a></div>
+        <div class="secure-seal"><img src="Fotos/selo-compra-segura.webp" alt="Compra segura, satisfação garantida, privacidade protegida" loading="lazy"></div>
+      </div>
+    </div>
   </div>
 </section>
 
