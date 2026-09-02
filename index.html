@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guia do Comportamento na Sala de Aula</title>
+<meta name="description" content="Guia para professoras aprenderem a conduzir os principais comportamentos difíceis dos 0 aos 14 anos, usando a Regra do GPS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* ---------- Tokens (mesma paleta da Rev3) ---------- */
+  :root{
+    --ink:#2E2F42;
+    --ink-soft:#5B5C78;
+    --ink-faint:#8B8CA6;
+    --cream:#FBF3E6;
+    --paper:#FFFDF9;
+    --line:#E7DCC9;
+
+    --yellow:#FFD65C;
+    --yellow-deep:#B8860A;
+    --yellow-tint:#FFF6DE;
+
+    --coral:#E85D51;
+    --coral-deep:#C43F35;
+    --coral-tint:#FCE7E4;
+
+    --sky:#8FC6E4;
+    --sky-deep:#3E7EA3;
+    --sky-tint:#EAF5FB;
+
+    --mauve:#A87CB0;
+    --mauve-deep:#744D7C;
+    --mauve-tint:#F5EBF6;
+
+    --green:#3FAE6A;
+    --green-deep:#2C8A54;
+    --green-tint:#E7F7ED;
+
+    --radius-s:10px;
+    --radius-m:18px;
+    --radius-l:28px;
+    --shadow-s:0 2px 10px rgba(46,47,66,0.06);
+    --shadow-m:0 12px 32px rgba(46,47,66,0.10);
+    --maxw:720px;
+    --maxw-wide:1040px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:82px;
+  }
+  @media(min-width:780px){ body{ padding-bottom:0; } }
+
+  img,svg{max-width:100%;display:block;}
+  h1,h2,h3{
+    font-family:"Baloo 2","Nunito",sans-serif;
+    color:var(--ink);
+    margin:0 0 .5em;
+    text-wrap:balance;
+    font-weight:700;
+  }
+  h1,h2{text-align:center;}
+  p{margin:0 0 1em;}
+  ul{margin:0;padding:0;list-style:none;}
+  a{color:inherit;}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .container-wide{max-width:var(--maxw-wide);margin:0 auto;padding:0 22px;}
+
+  .section{padding:clamp(46px,8vw,84px) 0;}
+  .section--paper{background:var(--paper);}
+  .section--sky{background:var(--sky-tint);}
+  .section--mauve{background:var(--mauve-tint);}
+  .section--yellow{background:var(--yellow-tint);}
+  .section--cream{background:var(--cream);}
+  .section--ink{background:var(--ink);color:var(--cream);}
+  .section--ink h1,.section--ink h2,.section--ink h3{color:var(--paper);}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:"Nunito",sans-serif;
+    font-size:12.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--sky-deep);
+    margin-bottom:14px;
+  }
+  .eyebrow.on-ink{color:var(--yellow);}
+  .eyebrow.tone-coral{color:var(--coral-deep);}
+  .eyebrow.tone-mauve{color:var(--mauve-deep);}
+
+  .hero-badge{
+    display:inline-flex;justify-content:center;align-items:center;text-align:center;
+    background:var(--coral-tint);color:var(--coral-deep);border:1px solid #F5C7C2;
+    font-family:"Nunito",sans-serif;font-weight:800;font-size:13px;letter-spacing:.03em;text-transform:uppercase;
+    padding:8px 18px;border-radius:100px;margin:0 auto 18px;
+  }
+
+  h1{font-size:clamp(28px,5.2vw,42px);line-height:1.18;}
+  h2{font-size:clamp(23px,3.6vw,30px);line-height:1.26;}
+  h3{font-size:clamp(18px,2.4vw,21px);line-height:1.32;}
+  .lead{font-size:18.5px;color:var(--ink-soft);}
+  .center{text-align:center;}
+  .muted{color:var(--ink-soft);}
+  .bold{font-weight:700;color:var(--ink);}
+
+  /* ---------- Botões ---------- */
+  .btn-cta{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--coral);color:#fff;
+    font-family:"Nunito",sans-serif;
+    font-weight:800;font-size:16px;letter-spacing:.01em;
+    padding:18px 28px;border-radius:100px;
+    text-decoration:none;border:none;cursor:pointer;
+    box-shadow:0 10px 24px rgba(200,63,53,.32);
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    width:100%;text-align:center;
+  }
+  .btn-cta:hover{background:var(--coral-deep);transform:translateY(-2px);box-shadow:0 14px 30px rgba(200,63,53,.4);}
+  .btn-cta:focus-visible{outline:3px solid var(--ink);outline-offset:3px;}
+  @media(min-width:560px){ .btn-cta{width:auto;} }
+  .cta-wrap{display:flex;justify-content:center;margin-top:26px;}
+  .cta-note{text-align:center;font-size:13.5px;color:var(--ink-faint);margin-top:12px;}
+
+  /* ---------- Placeholder de imagem/vídeo ---------- */
+  .img-ph{
+    position:relative;width:100%;border-radius:var(--radius-m);
+    border:2px dashed var(--line);background:var(--paper);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:8px;color:var(--ink-faint);text-align:center;padding:20px;
+    aspect-ratio:4/3;
+  }
+  .img-ph svg{color:var(--ink-faint);}
+  .img-ph span{font-size:12.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;}
+  .img-ph.ratio-wide{aspect-ratio:16/9;}
+  .img-ph.ratio-tall{aspect-ratio:3/4;}
+  .img-ph.ratio-square{aspect-ratio:1/1;}
+  figure{margin:22px 0;}
+
+  .video-ph .play-btn{
+    width:60px;height:60px;border-radius:50%;background:var(--coral);
+    display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-m);
+  }
+  .video-ph .play-btn svg{color:#fff;margin-left:3px;}
+
+  /* ---------- Tags / chips ---------- */
+  .chip-row{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:22px 0 6px;}
+  .chip{
+    background:var(--paper);border:1px solid var(--line);color:var(--ink-soft);
+    font-size:13.5px;font-weight:700;padding:9px 15px;border-radius:100px;
+  }
+
+  /* ---------- Situações (dobra 2) ---------- */
+  .situation-list{display:flex;flex-direction:column;gap:10px;margin:26px 0;}
+  .situation-item{
+    display:flex;gap:12px;align-items:center;
+    background:var(--paper);border:1px solid var(--line);
+    border-radius:var(--radius-m);padding:15px 18px;
+    box-shadow:var(--shadow-s);font-size:16px;color:var(--ink);
+  }
+  .situation-item .dot{
+    flex:none;width:9px;height:9px;border-radius:50%;background:var(--coral);
+  }
+  .closing-lines{text-align:center;margin-top:28px;}
+  .closing-lines p{font-family:"Baloo 2",sans-serif;font-weight:600;font-size:19px;margin:0 0 4px;color:var(--ink);}
+  .closing-lines p.final{color:var(--sky-deep);}
+
+  /* ---------- Rota GPS (dobra 3) ---------- */
+  .gps-route{position:relative;margin:32px 0 8px;padding-left:34px;}
+  .gps-route::before{
+    content:'';position:absolute;left:11px;top:8px;bottom:8px;width:2px;
+    background:repeating-linear-gradient(to bottom,var(--sky-deep) 0 8px,transparent 8px 16px);
+  }
+  .gps-step{position:relative;padding-bottom:26px;}
+  .gps-step:last-child{padding-bottom:0;}
+  .gps-step::before{
+    content:'';position:absolute;left:-34px;top:2px;width:24px;height:24px;border-radius:50%;
+    background:var(--sky-deep);border:4px solid var(--sky-tint);
+  }
+  .gps-step p{font-family:"Baloo 2",sans-serif;font-weight:600;font-size:17.5px;color:var(--ink);margin:0;}
+
+  /* ---------- Checklist com ícone ---------- */
+  .check-list{display:flex;flex-direction:column;gap:14px;}
+  .check-item{display:flex;gap:12px;align-items:flex-start;font-size:16.5px;}
+  .check-item svg{flex:none;color:var(--green-deep);margin-top:3px;}
+  .check-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:26px 0;}
+  @media(min-width:640px){ .check-grid{grid-template-columns:1fr 1fr;} }
+
+  .quote-card{
+    background:var(--sky-tint);border:1px solid #CFE6F2;border-radius:var(--radius-m);
+    padding:20px 22px;text-align:center;margin:20px 0 28px;
+  }
+  .quote-card p{
+    font-family:"Baloo 2",sans-serif;font-weight:700;font-size:20px;color:var(--sky-deep);margin:0;
+  }
+
+  /* ---------- Cards de idade (dobra 5) ---------- */
+  .age-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px;}
+  @media(min-width:680px){ .age-grid{grid-template-columns:1fr 1fr;} }
+  .age-card{
+    border-radius:var(--radius-m);padding:22px;background:var(--paper);
+    border:1px solid var(--line);border-top:6px solid var(--sky-deep);box-shadow:var(--shadow-s);
+  }
+  .age-card.c-sky{border-top-color:var(--sky-deep);}
+  .age-card.c-coral{border-top-color:var(--coral);}
+  .age-card.c-yellow{border-top-color:var(--yellow-deep);}
+  .age-card.c-mauve{border-top-color:var(--mauve-deep);}
+  .age-card.c-green{border-top-color:var(--green-deep);}
+  .age-card .age-emoji{font-size:26px;margin-bottom:6px;}
+  .age-card h3{margin-bottom:8px;}
+  .age-card p{color:var(--ink-soft);font-size:15px;margin:0;}
+  .age-card.full{grid-column:1/-1;}
+
+  .stat-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px;}
+  .stat-pill{
+    background:var(--ink);color:var(--paper);font-family:"Baloo 2",sans-serif;font-weight:700;
+    font-size:14.5px;padding:12px 20px;border-radius:100px;
+  }
+
+  /* ---------- Bônus (dobra 6) ---------- */
+  .bonus-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:28px;}
+  @media(min-width:680px){ .bonus-grid{grid-template-columns:1fr 1fr;} }
+  .bonus-card{
+    position:relative;background:var(--paper);border-radius:var(--radius-l);
+    padding:26px;box-shadow:var(--shadow-s);border:1px solid var(--line);text-align:center;
+  }
+  .bonus-ribbon{
+    display:inline-block;background:var(--yellow);color:var(--ink);font-weight:800;
+    font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:6px 14px;
+    border-radius:100px;margin-bottom:14px;
+  }
+  .bonus-card h3{margin-bottom:10px;}
+  .bonus-card p{color:var(--ink-soft);font-size:15px;}
+  .bonus-value{display:flex;align-items:baseline;justify-content:center;gap:10px;margin-top:14px;}
+  .bonus-value s{color:var(--ink-faint);font-size:15px;}
+  .bonus-value strong{color:var(--green-deep);font-family:"Baloo 2",sans-serif;font-weight:800;font-size:18px;}
+
+  .bonus-toggle{
+    text-align:left;margin-top:14px;background:var(--yellow-tint);border:1px solid #F0DFA0;
+    border-radius:var(--radius-s);padding:0 14px;
+  }
+  .bonus-toggle summary{
+    display:flex;justify-content:space-between;align-items:center;gap:10px;
+    padding:12px 0;cursor:pointer;list-style:none;font-weight:700;font-size:14.5px;color:var(--ink);
+  }
+  .bonus-toggle summary::-webkit-details-marker{display:none;}
+  .bonus-toggle summary svg{flex:none;color:var(--yellow-deep);transition:transform .2s ease;}
+  .bonus-toggle[open] summary svg{transform:rotate(180deg);}
+  .bonus-toggle ul{padding:0 0 6px;display:flex;flex-direction:column;gap:7px;}
+  .bonus-toggle li{
+    position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-soft);
+  }
+  .bonus-toggle li::before{
+    content:'';position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--yellow-deep);
+  }
+  .bonus-toggle .pdf-note{padding:0 0 12px;font-size:13.5px;color:var(--ink);font-weight:700;}
+
+  /* ---------- Depoimentos (dobra 7) ---------- */
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px;}
+  @media(min-width:640px){ .testi-grid{grid-template-columns:repeat(3,1fr);} }
+  .testi-grid img{
+    width:100%;height:auto;display:block;border-radius:var(--radius-m);
+    box-shadow:var(--shadow-s);border:1px solid var(--line);
+  }
+
+  /* ---------- Urgência / contador (dobra 8) ---------- */
+  .section--urgency{
+    position:relative;
+    background:radial-gradient(120% 140% at 50% -10%, #5A1712 0%, #2A0B08 55%, #1A0705 100%);
+  }
+  .hazard-stripe{
+    height:12px;
+    background:repeating-linear-gradient(-45deg, var(--yellow) 0 16px, #1A0705 16px 32px);
+  }
+  @keyframes urgency-pulse{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.06); }
+  }
+  @keyframes urgency-glow{
+    0%,100%{ box-shadow:0 0 0 0 rgba(232,93,81,.55), var(--shadow-m); }
+    50%{ box-shadow:0 0 0 12px rgba(232,93,81,0), var(--shadow-m); }
+  }
+  @keyframes urgency-blink{
+    0%,100%{ opacity:1; }
+    50%{ opacity:.35; }
+  }
+  .urgency-badge{
+    display:flex;justify-content:center;margin-bottom:16px;
+  }
+  .urgency-badge span{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--coral);color:#fff;font-weight:800;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;
+    padding:9px 18px;border-radius:100px;
+    animation:urgency-pulse 1.4s ease-in-out infinite;
+  }
+  .urgency-icon{display:flex;justify-content:center;margin-bottom:16px;}
+  .urgency-icon svg{animation:urgency-pulse 1.4s ease-in-out infinite;}
+  .countdown{display:flex;justify-content:center;align-items:center;gap:10px;margin:26px 0 18px;}
+  .cd-box{
+    background:linear-gradient(160deg, var(--coral) 0%, var(--coral-deep) 100%);
+    border-radius:var(--radius-m);padding:16px 14px;min-width:74px;text-align:center;
+    animation:urgency-glow 1.6s ease-in-out infinite;
+  }
+  .cd-box .num{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:clamp(30px,7vw,42px);color:#fff;line-height:1;}
+  .cd-box .lbl{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-top:4px;}
+  .cd-sep{
+    font-family:"Baloo 2",sans-serif;font-weight:800;font-size:clamp(24px,6vw,34px);color:var(--coral);
+    animation:urgency-blink 1s step-start infinite;
+  }
+  .urgency-note{
+    text-align:center;font-weight:800;color:var(--ink);margin:8px auto 0;max-width:340px;
+    background:var(--yellow);padding:10px 18px;border-radius:100px;
+    animation:urgency-pulse 1.4s ease-in-out infinite;
+  }
+
+  /* ---------- Autoridade (dobra 9) ---------- */
+  .pillar-row{display:grid;grid-template-columns:1fr;gap:16px;margin:28px 0;}
+  @media(min-width:680px){ .pillar-row{grid-template-columns:repeat(3,1fr);} }
+  .pillar-tile{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);
+    padding:22px;text-align:center;box-shadow:var(--shadow-s);
+  }
+  .pillar-tile .pillar-emoji{font-size:28px;margin-bottom:10px;}
+  .pillar-tile h3{margin-bottom:6px;font-size:17px;}
+  .pillar-tile p{color:var(--ink-soft);font-size:14.5px;margin:0;}
+
+  .logo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px;}
+  @media(min-width:760px){ .logo-grid{grid-template-columns:repeat(4,1fr);} }
+  .logo-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);
+    padding:20px 16px;display:flex;flex-direction:column;align-items:center;gap:14px;
+    box-shadow:var(--shadow-s);text-align:center;
+  }
+  .logo-card--dark{background:var(--ink);}
+  .logo-card img{height:70px;width:auto;max-width:100%;object-fit:contain;}
+  .logo-caption strong{display:block;font-size:13.5px;color:var(--ink);}
+  .logo-card--dark .logo-caption strong{color:var(--paper);}
+  .logo-caption span{display:block;font-size:12px;color:var(--ink-faint);margin-top:4px;line-height:1.4;}
+  .logo-card--dark .logo-caption span{color:#B9BAD0;}
+
+  /* ---------- Oferta / preço ---------- */
+  .price-block{
+    margin:30px auto 0;max-width:480px;text-align:center;
+    background:var(--green-tint);border-radius:var(--radius-l);
+    padding:clamp(28px,6vw,42px);box-shadow:var(--shadow-m);
+  }
+  .price-was{font-size:16px;color:var(--ink-soft);margin-bottom:8px;}
+  .price-was s{color:var(--coral-deep);}
+  .price-hero{display:flex;flex-direction:column;align-items:center;gap:0;margin-bottom:12px;}
+  .price-hero-top{font-family:"Baloo 2",sans-serif;font-weight:700;font-size:21px;color:var(--green-deep);}
+  .price-hero-value{
+    font-family:"Baloo 2",sans-serif;font-weight:800;color:var(--green-deep);
+    font-size:clamp(48px,11vw,72px);line-height:1.05;
+  }
+  .price-or{font-size:14px;color:var(--ink-faint);margin:6px 0;}
+  .price-alt{font-size:18px;color:var(--ink-soft);}
+  .price-alt strong{color:var(--ink);font-weight:800;font-size:21px;}
+
+  /* ---------- Garantia ---------- */
+  .guarantee-card{
+    display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;
+    background:var(--paper);border-radius:var(--radius-l);
+    padding:clamp(28px,5vw,44px);box-shadow:var(--shadow-m);
+  }
+  .guarantee-seal{width:180px;height:auto;flex:none;}
+  .guarantee-steps{display:flex;flex-direction:column;gap:4px;margin:6px 0;}
+  .guarantee-steps p{font-weight:700;color:var(--ink);margin:0;}
+
+  /* ---------- Especialista (dobra 12) ---------- */
+  .bio-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;}
+  .bio-photo{width:100%;max-width:420px;margin:0 auto;}
+  .bio-photo img{width:100%;height:auto;display:block;border-radius:var(--radius-l);}
+  .bio-name{font-family:"Baloo 2",sans-serif;font-weight:700;font-size:23px;margin-bottom:4px;}
+  .cred-list{display:flex;flex-direction:column;gap:10px;max-width:420px;margin:18px auto;text-align:left;}
+  .cred-list li{display:flex;gap:10px;font-size:16px;color:var(--ink);}
+  .cred-list li span.ic{flex:none;}
+  .bio-text{text-align:left;max-width:620px;margin:0 auto;}
+
+  /* ---------- Objeções (dobra 13) ---------- */
+  .objection-list{display:flex;flex-direction:column;gap:16px;margin-top:28px;}
+  .objection-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);
+    padding:20px 22px;box-shadow:var(--shadow-s);
+  }
+  .obj-q{display:flex;gap:10px;align-items:flex-start;font-family:"Baloo 2",sans-serif;font-weight:600;font-size:17px;color:var(--coral-deep);margin-bottom:8px;}
+  .obj-a{display:flex;gap:10px;align-items:flex-start;color:var(--ink-soft);font-size:15.5px;}
+  .obj-q svg,.obj-a svg{flex:none;margin-top:3px;}
+  .obj-q svg{color:var(--coral);}
+  .obj-a svg{color:var(--green-deep);}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item summary{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:19px 4px;font-weight:700;font-size:16px;cursor:pointer;list-style:none;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary svg{flex:none;color:var(--sky-deep);transition:transform .2s ease;}
+  .faq-item[open] summary svg{transform:rotate(180deg);}
+  .faq-item p{padding:0 4px 19px;color:var(--ink-soft);font-size:15px;}
+
+  /* ---------- Suporte ---------- */
+  .support-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:26px;}
+  @media(min-width:640px){ .support-grid{grid-template-columns:1fr 1fr;} }
+  .support-card{
+    display:flex;align-items:center;gap:16px;text-decoration:none;
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);
+    padding:20px;box-shadow:var(--shadow-s);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .support-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-m);}
+  .support-icon{flex:none;font-size:28px;line-height:1;}
+  .support-text{display:flex;flex-direction:column;gap:2px;}
+  .support-text strong{color:var(--ink);font-size:15.5px;}
+  .support-text span{color:var(--ink-soft);font-size:13.5px;}
+  .hours-box{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);
+    padding:18px 20px;margin-top:16px;text-align:center;
+  }
+  .hours-box p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+  .hours-box strong{color:var(--ink);}
+
+  /* ---------- Fechamento ---------- */
+  .closing{
+    background:linear-gradient(155deg,var(--ink) 0%,#2E4A5C 60%,var(--sky-deep) 100%);
+    color:var(--paper);text-align:center;
+  }
+  .closing h2{color:var(--paper);}
+  .closing p{color:#DDEAF2;}
+  .closing .quote-card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);}
+  .closing .quote-card p{color:var(--yellow);}
+  .price-mini{
+    display:inline-block;margin:8px auto 26px;
+    background:var(--green-tint);border-radius:var(--radius-l);
+    padding:16px 28px;box-shadow:var(--shadow-m);
+  }
+  .price-mini-value{display:block;font-family:"Baloo 2",sans-serif;font-weight:800;color:var(--green-deep);font-size:clamp(28px,6vw,38px);line-height:1.1;}
+  .price-mini-alt{display:block;font-size:14px;color:var(--ink-soft);margin-top:4px;}
+  .closing .check-list{max-width:280px;margin:0 auto 24px;text-align:left;}
+
+  /* ---------- Sticky CTA mobile ---------- */
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:var(--ink);border-top:1px solid rgba(255,255,255,.08);
+    padding:11px 16px calc(11px + env(safe-area-inset-bottom));
+    box-shadow:0 -6px 20px rgba(46,47,66,.18);
+    transform:translateY(110%);transition:transform .3s ease;
+  }
+  .sticky-cta.is-visible{transform:translateY(0);}
+  .sticky-cta-price{
+    display:flex;align-items:baseline;justify-content:center;gap:8px;margin-bottom:8px;
+    font-family:"Baloo 2",sans-serif;
+  }
+  .sticky-cta-price .val{font-weight:800;font-size:17px;color:var(--yellow);}
+  .sticky-cta-price .alt{font-size:12px;color:#B9BAD0;}
+  .sticky-cta .btn-cta{width:100%;padding:14px 20px;font-size:15px;}
+  @media(min-width:780px){ .sticky-cta{display:none;} }
+
+  footer{padding:28px 0;text-align:center;font-size:12.5px;color:var(--ink-faint);}
+  footer p{margin:0 0 8px;}
+  footer .foot-links a{text-decoration:none;color:var(--ink-faint);}
+</style>
+</head>
+<body>
+
+<!-- DOBRA 1 — GANCHO -->
+<section class="hero container" style="padding:clamp(40px,7vw,72px) 22px 8px;">
+  <div style="display:flex;justify-content:center;"><span class="hero-badge">Para professoras que querem estar preparadas para qualquer turma</span></div>
+  <h1>Como entrar em sala sabendo que você vai conseguir lidar com os alunos (sem precisar de anos de experiência), usando a Regra do GPS</h1>
+  <p class="lead center">Mesmo diante daquela turma que ninguém quer pegar, aprenda a conduzir seus alunos e saber qual caminho seguir quando surgir uma birra, provocação, agressividade, desafio à sua autoridade ou outro comportamento difícil.</p>
+
+  <figure>
+    <img src="Fotos/IDV - Guia Do Comportamento6.webp" alt="Helena Costa e alunos em sala de aula" style="width:100%;height:auto;border-radius:var(--radius-l);" loading="eager">
+  </figure>
+
+  <p class="center bold" style="margin-top:8px;">Dos 0 aos 14 anos, saiba como agir diante de:</p>
+  <div class="chip-row">
+    <span class="chip">Turmas agitadas</span>
+    <span class="chip">Birras</span>
+    <span class="chip">Agressividade</span>
+    <span class="chip">Desobediência</span>
+    <span class="chip">Provocações</span>
+    <span class="chip">Desafio à autoridade</span>
+  </div>
+</section>
+
+<!-- DOBRA 2 — CONFIRMAÇÃO DO INTERESSE -->
+<section class="section section--paper">
+  <div class="container">
+    <h2>Você nunca sabe qual situação vai encontrar quando entrar em sala.</h2>
+
+    <figure style="max-width:480px;margin:22px auto;">
+      <img src="Fotos/IDV - Guia Do Comportamento5.webp" alt="Sala de aula com alunos em atividade" style="width:100%;height:auto;border-radius:var(--radius-l);" loading="lazy">
+    </figure>
+
+    <div class="situation-list">
+      <div class="situation-item"><span class="dot"></span><span>O aluno que bate quando é contrariado.</span></div>
+      <div class="situation-item"><span class="dot"></span><span>A criança que se joga no chão durante uma birra.</span></div>
+      <div class="situation-item"><span class="dot"></span><span>A turma que não para de conversar.</span></div>
+      <div class="situation-item"><span class="dot"></span><span>O aluno que se recusa a fazer a atividade.</span></div>
+      <div class="situation-item"><span class="dot"></span><span>A resposta grosseira na frente de todos.</span></div>
+      <div class="situation-item"><span class="dot"></span><span>O desafio à sua autoridade.</span></div>
+    </div>
+
+    <div class="closing-lines">
+      <p>Você não consegue prever qual delas vai acontecer amanhã.</p>
+      <p class="final">Mas pode estar preparada para saber como lidar quando acontecer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 3 — SOLUÇÃO E OPORTUNIDADE -->
+<section class="section section--sky">
+  <div class="container">
+    <h2>A professora que dá conta das turmas mais difíceis não acerta sempre de primeira. Ela sabe como conduzir quando algo sai do esperado.</h2>
+    <p class="lead center bold">E essa é a Regra do GPS.</p>
+
+    <figure style="max-width:480px;margin:22px auto;">
+      <img src="Fotos/IDV - Guia Do Comportamento4.webp" alt="Helena conduzindo uma roda de conversa com os alunos" style="width:100%;height:auto;border-radius:var(--radius-l);" loading="lazy">
+    </figure>
+
+    <p class="center bold" style="margin-top:26px;">Assim como um GPS, você aprende a:</p>
+    <div class="gps-route">
+      <div class="gps-step"><p>Saber onde quer chegar com aquele aluno.</p></div>
+      <div class="gps-step"><p>Antecipar o que vem pela frente.</p></div>
+      <div class="gps-step"><p>Dar a informação necessária naquele momento.</p></div>
+      <div class="gps-step"><p>Recalcular quando a primeira estratégia não funciona.</p></div>
+    </div>
+
+    <p style="margin-top:12px;">Porque não existe uma única estratégia que funcione com todo aluno.</p>
+    <p>O que existe é uma professora preparada para encontrar outro caminho quando precisar.</p>
+    <p class="bold">E é esse repertório que permite entrar em qualquer turma sabendo que vai conseguir lidar com ela.</p>
+  </div>
+</section>
+
+<!-- DOBRA 4 — BENEFÍCIOS -->
+<section class="section section--paper">
+  <div class="container">
+    <h2>Pegue qualquer turma sabendo que você tem preparo para lidar até com os alunos mais difíceis</h2>
+    <p>Com mais repertório para lidar com comportamentos difíceis, você começa a trocar a insegurança por uma sensação muito diferente:</p>
+
+    <div class="quote-card"><p>"Se acontecer, eu sei como lidar."</p></div>
+
+    <p class="bold">Você se prepara para:</p>
+    <div class="check-grid">
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Assumir uma turma nova com mais segurança</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Saber como reagir sem depender do improviso</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Conduzir alunos que desafiam seus limites</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Saber o que priorizar no meio de uma situação difícil</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Antecipar situações que costumam gerar conflitos</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Sentir que tem mais recursos até nos dias mais imprevisíveis</span></div>
+    </div>
+
+    <div class="closing-lines">
+      <p>Não é sobre ter uma turma perfeita.</p>
+      <p class="final" style="color:var(--sky-deep);">É sobre se tornar a professora preparada até para a turma que está longe de ser perfeita.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 5 — O QUE VOCÊ RECEBE -->
+<section class="section section--mauve">
+  <div class="container-wide">
+    <h2 class="center">Dos primeiros choros e birras aos desafios à sua autoridade.</h2>
+    <p class="center" style="max-width:640px;margin:0 auto;">O Guia do Comportamento na Sala de Aula acompanha as principais situações que podem aparecer dos 0 aos 14 anos, organizadas pela idade dos seus alunos.</p>
+    <p class="center bold" style="max-width:640px;margin:10px auto 0;">Assim, você pode ir direto ao que precisa.</p>
+
+    <figure>
+      <img src="Fotos/group_6-scaled.webp" alt="Guia do Comportamento na Sala de Aula acessado no celular, com fotos reais de sala de aula" style="width:100%;height:auto;" loading="lazy">
+    </figure>
+
+    <div class="age-grid">
+      <div class="age-card c-sky">
+        <div class="age-emoji">👶</div>
+        <h3>Maternal</h3>
+        <p>Choro • Mordidas • Bater e empurrar • Birras • Ansiedade de separação • Dificuldade para compartilhar • Resistência ao sono e alimentação • Transições</p>
+      </div>
+      <div class="age-card c-coral">
+        <div class="age-emoji">🧸</div>
+        <h3>Educação Infantil</h3>
+        <p>Birras • Gritos • Interrupções • Agressividade • Mentiras • Sair da sala • Não seguir combinados • Insistir em fazer do próprio jeito</p>
+      </div>
+      <div class="age-card c-yellow">
+        <div class="age-emoji">✏️</div>
+        <h3>Fundamental 1</h3>
+        <p>Conversa excessiva • Falar fora de hora • Resistência às tarefas • Frustração • Competitividade • Busca por atenção • Reclamações • Bullying verbal</p>
+      </div>
+      <div class="age-card c-mauve">
+        <div class="age-emoji">📚</div>
+        <h3>Fundamental 2</h3>
+        <p>Questionar sua autoridade • Respostas grosseiras • Provocações • Isolamento • Recusa em trabalhar em grupo • Reclamações • Dificuldade com críticas • Desorganização</p>
+      </div>
+      <div class="age-card c-green full">
+        <div class="age-emoji">🎓</div>
+        <h3>Ensino Médio</h3>
+        <p>Cinismo e sarcasmo • Desprezo pelas regras • Liderança negativa • Desrespeito passivo-agressivo • Conflitos verbais • Isolamento • Recusa ao trabalho coletivo • Bullying verbal</p>
+      </div>
+    </div>
+
+    <p class="center" style="max-width:600px;margin:26px auto 0;">+ Módulo de Introdução: entenda como os comportamentos mudam conforme a idade e como começar a escolher suas estratégias.</p>
+
+    <div class="stat-row">
+      <span class="stat-pill">Mais de 60 aulas e recursos para você construir seu repertório</span>
+      <span class="stat-pill">Acesso imediato e vitalício</span>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 6 — BÔNUS -->
+<section class="section section--paper">
+  <div class="container">
+    <h2>E você não precisa construir esse repertório sozinha.</h2>
+    <p class="center">Além de todo o Guia, você também recebe:</p>
+
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <span class="bonus-ribbon">🎁 Bônus 1</span>
+        <h3>Grupo VIP no WhatsApp</h3>
+        <img src="Fotos/desafios 3 foto 15.webp" alt="Grupo VIP de Professoras no WhatsApp" style="width:100%;height:auto;" loading="lazy">
+        <p style="margin-top:14px;">Tenha um espaço para trocar experiências com outras professoras, compartilhar situações da sua sala e continuar ampliando seu repertório.</p>
+        <div class="bonus-value"><span class="muted">Valor:</span><s>R$ 97</s><strong>GRÁTIS</strong></div>
+      </div>
+      <div class="bonus-card">
+        <span class="bonus-ribbon">🎁 Bônus 2</span>
+        <h3>Volta às Aulas Serena</h3>
+        <img src="Fotos/aulas.webp" alt="Bônus Volta às Aulas Serena: 10 aulas exclusivas" style="width:100%;height:auto;" loading="lazy">
+        <p style="margin-top:14px;">10 aulas exclusivas e PDFs de Adaptação para você começar esse período sabendo como preparar a turma, antecipar problemas e conduzir os primeiros dias com mais segurança.</p>
+        <details class="bonus-toggle">
+          <summary><span>Ver as aulas</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <ul>
+            <li>Começando com o pé direito</li>
+            <li>Por que a volta é tão difícil para as crianças?</li>
+            <li>Estratégias para a primeira semana: Dia 1</li>
+            <li>Estratégias para a primeira semana: Dia 2</li>
+            <li>Estratégias para a primeira semana: Dia 3</li>
+            <li>Estratégias para a primeira semana: Dia 4</li>
+            <li>Estratégias para a primeira semana: Dia 5</li>
+            <li>Como retomar a autoridade com afeto</li>
+            <li>Terminando com os dois pés</li>
+            <li>Extra: Aula "E se todo mundo fizesse isso?"</li>
+          </ul>
+          <p class="pdf-note">+ PDF's de Adaptação</p>
+        </details>
+        <div class="bonus-value"><span class="muted">Valor:</span><s>R$ 67</s><strong>GRÁTIS</strong></div>
+      </div>
+    </div>
+
+    <p class="center bold" style="margin-top:26px;">Os dois estão incluídos na sua inscrição no Guia do Comportamento.</p>
+  </div>
+</section>
+
+<!-- DOBRA 7 — DEPOIMENTOS -->
+<section class="section section--sky">
+  <div class="container-wide">
+    <h2 class="center">Professoras que já estão levando esse repertório para a sala de aula</h2>
+    <div class="testi-grid">
+      <img src="Fotos/Depoimentos Desafios/21-e1778730411922.webp" alt="Depoimento de professora sobre o método" loading="lazy">
+      <img src="Fotos/Depoimentos Desafios/22-e1778730464424.webp" alt="Depoimento de professora sobre o método" loading="lazy">
+      <img src="Fotos/Depoimentos Desafios/23-e1778730486704.webp" alt="Depoimento de professora sobre o método" loading="lazy">
+      <img src="Fotos/Depoimentos Desafios/24-e1778730507341.webp" alt="Depoimento de professora sobre o método" loading="lazy">
+      <img src="Fotos/Depoimentos Desafios/25-e1778730536535.webp" alt="Depoimento de professora sobre o método" loading="lazy">
+      <img src="Fotos/Depoimentos Desafios/26-e1778730553272.webp" alt="Depoimento de professora sobre o método" loading="lazy">
+      <img src="Fotos/Depoimentos Desafios/29-e1778730583493.webp" alt="Depoimento de professora sobre o método" loading="lazy">
+      <img src="Fotos/Depoimentos Desafios/30-e1778730607288.webp" alt="Depoimento de professora sobre o método" loading="lazy">
+      <img src="Fotos/Depoimentos Desafios/33-e1778730628335.webp" alt="Depoimento de professora sobre o método" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 8 — URGÊNCIA -->
+<section class="section--urgency">
+  <div class="hazard-stripe"></div>
+  <div class="section" style="padding:clamp(38px,7vw,64px) 0;">
+    <div class="container">
+      <div class="urgency-badge"><span>⚠️ Vagas se esgotando</span></div>
+      <div class="urgency-icon">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="1.8"><path d="M12 3 2 20h20L12 3Z" stroke-linejoin="round"/><path d="M12 10v4"/><circle cx="12" cy="17" r="1" fill="var(--yellow)" stroke="none"/></svg>
+      </div>
+      <h2 class="center" style="color:var(--paper);">As últimas vagas desta turma estão sendo preenchidas.</h2>
+      <p class="center" style="color:#F2D9D5;">Para manter a entrada das novas alunas organizada, estamos encerrando as inscrições desta turma assim que as vagas disponíveis forem preenchidas.</p>
+      <p class="center" style="color:#F2D9D5;">Se ainda houver vaga quando você estiver nesta página, você pode garantir seu acesso agora.</p>
+
+      <p class="center bold" style="color:var(--paper);margin-top:26px;letter-spacing:.04em;">INSCRIÇÕES ENCERRAM EM:</p>
+      <div class="countdown">
+        <div class="cd-box"><div class="num" id="cd-h">00</div><div class="lbl">Horas</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box"><div class="num" id="cd-m">14</div><div class="lbl">Min</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box"><div class="num" id="cd-s">37</div><div class="lbl">Seg</div></div>
+      </div>
+
+      <div style="display:flex;justify-content:center;">
+        <p class="urgency-note">⏳ Restam poucas vagas disponíveis para esta turma.</p>
+      </div>
+      <p class="center" style="color:#F2D9D5;margin-top:18px;">Quando o cronômetro chegar ao fim, as inscrições serão encerradas e o acesso pelo valor atual não estará mais disponível.</p>
+    </div>
+  </div>
+  <div class="hazard-stripe"></div>
+</section>
+
+<!-- DOBRA 9 — MICRO-AUTORIDADE -->
+<section class="section section--paper">
+  <div class="container">
+    <h2>Um método desenvolvido por quem estuda o comportamento dentro e fora da sala de aula.</h2>
+
+    <figure style="max-width:420px;margin:22px auto;">
+      <img src="Fotos/IDV - Guia Do Comportamento1.webp" alt="Helena Costa, especialista em comportamento infantil" style="width:100%;height:auto;border-radius:var(--radius-l);" loading="lazy">
+    </figure>
+
+    <p>Helena Costa é mestre em Educação da Primeira Infância, com formação realizada na Austrália, e há mais de 10 anos ajuda professoras a compreenderem e conduzirem melhor os comportamentos de seus alunos.</p>
+    <p class="bold center">No Guia, ela une:</p>
+
+    <div class="pillar-row">
+      <div class="pillar-tile">
+        <div class="pillar-emoji">🧠</div>
+        <h3>Neurociência</h3>
+        <p>Entenda melhor o que pode estar por trás do comportamento.</p>
+      </div>
+      <div class="pillar-tile">
+        <div class="pillar-emoji">👩‍🏫</div>
+        <h3>Prática de sala de aula</h3>
+        <p>Saiba como transformar conhecimento em ação diante do aluno.</p>
+      </div>
+      <div class="pillar-tile">
+        <div class="pillar-emoji">🧭</div>
+        <h3>Regra do GPS</h3>
+        <p>Tenha mais clareza para conduzir, antecipar, orientar e recalcular quando necessário.</p>
+      </div>
+    </div>
+
+    <p class="center bold">Para você não precisar esperar anos de sala de aula para começar a construir esse repertório.</p>
+
+    <div class="logo-grid">
+      <div class="logo-card">
+        <img src="Fotos/Logos/logo-south-australia.jpg" alt="University of South Australia" loading="lazy">
+        <div class="logo-caption"><strong>University of South Australia</strong><span>Mestrado em Educação Infantil</span></div>
+      </div>
+      <div class="logo-card">
+        <img src="Fotos/Logos/logo-positive-discipline.png" alt="Positive Discipline Association" loading="lazy">
+        <div class="logo-caption"><strong>Positive Discipline Association</strong><span>Educadora Parental Certificada</span></div>
+      </div>
+      <div class="logo-card logo-card--dark">
+        <img src="Fotos/Logos/logo-oxford.png" alt="University of Oxford" loading="lazy">
+        <div class="logo-caption"><strong>University of Oxford</strong><span>Certificação em História do Cérebro</span></div>
+      </div>
+      <div class="logo-card">
+        <img src="Fotos/Logos/logo-butterfly.png" alt="Butterfly Foundation" loading="lazy">
+        <div class="logo-caption"><strong>Butterfly Foundation</strong><span>Certificação em Imagem Corporal e Transtornos Alimentares na Infância</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 10 — OFERTA -->
+<section class="section section--yellow" id="oferta">
+  <div class="container">
+    <h2>Dê o próximo passo para se tornar a professora que consegue lidar com qualquer turma</h2>
+
+    <figure>
+      <img src="Fotos/IDV - Guia Do Comportamento3.webp" alt="Guia do Comportamento na Sala de Aula: mockup do curso, PDFs e Grupo VIP" style="width:100%;height:auto;" loading="lazy">
+    </figure>
+
+    <p>Com o Guia do Comportamento na Sala de Aula, você recebe acesso a um repertório prático para lidar com os principais comportamentos dos 0 aos 14 anos.</p>
+    <p class="bold">Você recebe:</p>
+
+    <div class="check-list">
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Mais de 60 aulas e recursos</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Estratégias organizadas por idade e comportamento</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Maternal</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Educação Infantil</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Fundamental 1</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Fundamental 2</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Ensino Médio</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Materiais complementares</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Grupo VIP no WhatsApp</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Bônus Volta às Aulas Serena</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Acesso imediato e vitalício</span></div>
+    </div>
+
+    <div class="price-block">
+      <p class="price-was">Valor antigo: <s>R$ 299,00</s></p>
+      <div class="price-hero">
+        <span class="price-hero-top">Hoje por:</span>
+        <span class="price-hero-value">12x R$10,03</span>
+      </div>
+      <p class="price-or">Ou</p>
+      <p class="price-alt"><strong>R$ 97</strong> à vista</p>
+    </div>
+
+    <div class="cta-wrap"><a href="https://checkout.payt.com.br/aaa58b42aa6473d9c637ff7b37ededed" class="btn-cta">QUERO ESTAR PREPARADA PARA QUALQUER TURMA</a></div>
+    <p class="cta-note">Acesso liberado imediatamente após a confirmação do pagamento.</p>
+  </div>
+</section>
+
+<!-- DOBRA 11 — GARANTIA -->
+<section class="section section--paper">
+  <div class="container">
+    <div class="guarantee-card">
+      <img class="guarantee-seal" src="Fotos/garantia 7 dias hena1.webp" alt="Garantia de 7 dias ou seu dinheiro de volta" loading="lazy">
+      <h2 style="margin-bottom:0;">Você tem 7 dias para entrar, conhecer e decidir com calma.</h2>
+      <p>Assim que fizer sua inscrição, você poderá acessar o Guia do Comportamento na Sala de Aula e começar pelas situações que mais desafiam você hoje.</p>
+      <div class="guarantee-steps">
+        <p>Explore as aulas.</p>
+        <p>Conheça as estratégias.</p>
+        <p>Veja como o conteúdo funciona na prática.</p>
+      </div>
+      <p>Se dentro de 7 dias você entender que o Guia não é para você, basta solicitar o reembolso dentro do prazo.</p>
+      <p class="bold" style="font-size:19px;color:var(--green-deep);">Seu risco é de R$ 0.</p>
+      <p>Você pode conhecer primeiro e decidir depois se quer continuar com o acesso vitalício.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 12 — QUEM É A ESPECIALISTA -->
+<section class="section section--mauve">
+  <div class="container">
+    <h2>Por trás do Guia está uma professora que dedicou sua carreira a entender como conduzir melhor os alunos.</h2>
+
+    <div class="bio-card">
+      <div class="bio-photo">
+        <img src="Fotos/IDV - Guia Do Comportamento2a.webp" alt="Helena Costa" loading="lazy">
+      </div>
+      <div class="bio-name">Helena Costa</div>
+    </div>
+
+    <ul class="cred-list">
+      <li><span class="ic">🎓</span><span>Mestre em Educação da Primeira Infância</span></li>
+      <li><span class="ic">🇦🇺</span><span>Formação realizada na Austrália</span></li>
+      <li><span class="ic">👩‍🏫</span><span>Mais de 10 anos ajudando professoras</span></li>
+      <li><span class="ic">🧠</span><span>Trabalho baseado em desenvolvimento infantil, comportamento e Neurociência</span></li>
+    </ul>
+
+    <div class="bio-text">
+      <p>Ao longo dessa trajetória, Helena percebeu algo importante:</p>
+      <p>Professoras não precisam apenas entender por que um comportamento acontece.</p>
+      <p>Precisam saber:</p>
+    </div>
+
+    <div class="quote-card"><p>"E agora, Helena? O que eu faço?"</p></div>
+
+    <div class="bio-text">
+      <p>Foi para transformar conhecimento em respostas mais práticas para a realidade da sala de aula que nasceu o Guia do Comportamento.</p>
+      <p>Um repertório que une acolhimento e firmeza, para ajudar você a conduzir seus alunos sem depender apenas do improviso.</p>
+      <p class="bold">Porque você não precisa ter vivido todas as situações para começar a se preparar para elas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 13 — QUEBRA DE OBJEÇÕES -->
+<section class="section section--paper">
+  <div class="container">
+    <h2>Talvez você esteja pensando…</h2>
+
+    <div class="objection-list">
+      <div class="objection-card">
+        <div class="obj-q"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span>"Mas eu ainda tenho pouca experiência em sala."</span></div>
+        <div class="obj-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Melhor ainda: você não precisa esperar anos até viver cada situação para só então aprender como lidar com ela. O Guia ajuda você a construir esse repertório desde agora.</span></div>
+      </div>
+      <div class="objection-card">
+        <div class="obj-q"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span>"Minha turma é muito difícil. Já tentei várias estratégias."</span></div>
+        <div class="obj-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>O objetivo não é entregar uma única estratégia que promete funcionar com todo aluno. É ampliar seus caminhos para que, quando uma abordagem não funcionar, você tenha outras formas de conduzir.</span></div>
+      </div>
+      <div class="objection-card">
+        <div class="obj-q"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span>"Na hora do problema eu não consigo lembrar de tudo que estudei."</span></div>
+        <div class="obj-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Por isso o conteúdo é organizado por idade e comportamento. Em vez de acumular mais teoria solta, você consegue estudar justamente as situações que fazem parte da sua realidade.</span></div>
+      </div>
+    </div>
+
+    <p class="center bold" style="margin-top:26px;">Você não precisa ter uma resposta perfeita para tudo. Precisa estar mais preparada para encontrar o próximo caminho.</p>
+  </div>
+</section>
+
+<!-- DOBRA 14 — REPETE A OFERTA -->
+<section class="section section--sky" id="checkout">
+  <div class="container">
+    <h2>Entre na próxima turma com mais repertório do que você tem hoje.</h2>
+
+    <figure>
+      <img src="Fotos/iphoneefotoss.webp" alt="Guia do Comportamento na Sala de Aula acessado no celular, com fotos reais de sala de aula" style="width:100%;height:auto;" loading="lazy">
+    </figure>
+
+    <h3 class="center">Guia do Comportamento na Sala de Aula</h3>
+    <div class="check-list">
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Mais de 60 aulas e recursos</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Comportamentos dos 0 aos 14 anos</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Estratégias separadas por idade e situação</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Materiais complementares</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Grupo VIP no WhatsApp</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Volta às Aulas Serena</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Acesso imediato</span></div>
+      <div class="check-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Acesso vitalício</span></div>
+    </div>
+
+    <div class="price-block">
+      <p class="price-was">Valor antigo: <s>R$ 299,00</s></p>
+      <div class="price-hero">
+        <span class="price-hero-top">Hoje por:</span>
+        <span class="price-hero-value">12x R$10,03</span>
+      </div>
+      <p class="price-or">Ou</p>
+      <p class="price-alt"><strong>R$ 97</strong> à vista</p>
+    </div>
+
+    <div class="cta-wrap"><a href="https://checkout.payt.com.br/aaa58b42aa6473d9c637ff7b37ededed" class="btn-cta">QUERO ME PREPARAR PARA QUALQUER TURMA</a></div>
+    <p class="cta-note">🔒 7 dias de garantia</p>
+  </div>
+</section>
+
+<!-- DOBRA 15 — PERGUNTAS FREQUENTES -->
+<section class="section section--paper">
+  <div class="container">
+    <h2>Ainda ficou alguma dúvida?</h2>
+    <div>
+      <details class="faq-item">
+        <summary><span>O Guia serve para quais idades?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>O conteúdo aborda comportamentos dos 0 aos 14 anos, passando pelo Maternal, Educação Infantil, Fundamental 1, Fundamental 2 e Ensino Médio.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span>Serve para professoras de escola pública?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>Sim. As estratégias podem ser aplicadas tanto em escolas públicas quanto particulares, inclusive em turmas grandes e desafiadoras.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span>Sou professora iniciante. Vou conseguir acompanhar?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>Sim. Você não precisa ter experiência prévia com manejo de comportamento. O conteúdo foi organizado para ajudar você a entender as situações e ampliar seu repertório de forma prática.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span>Já tenho experiência. Ainda vale a pena?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>Sim. O Guia também é para a professora que já viveu muitas situações, mas ainda encontra comportamentos diante dos quais pensa: "o que eu faço agora?"</p>
+      </details>
+      <details class="faq-item">
+        <summary><span>Como vou acessar?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>O acesso é 100% online, para você assistir pelo celular, computador ou tablet.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span>Por quanto tempo terei acesso?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>Seu acesso ao Guia é vitalício.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span>O acesso é liberado quando?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>Após a confirmação do pagamento, você recebe as instruções para começar.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span>E se eu comprar e não gostar?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>Você tem 7 dias de garantia para conhecer o conteúdo e solicitar o reembolso caso decida que ele não é para você.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 16 — CONTATO E SUPORTE -->
+<section class="section section--mauve">
+  <div class="container">
+    <h2>Ficou com alguma dúvida? A gente ajuda você.</h2>
+    <p class="center">Se tiver qualquer dificuldade com sua inscrição, pagamento ou acesso ao Guia, nossa equipe de suporte estará disponível para orientar você.</p>
+
+    <div class="hours-box">
+      <p class="bold">Atendimento Lumii</p>
+      <p>Segunda a sexta: 09h às 17h</p>
+      <p>Sábado: 09h às 12h</p>
+    </div>
+
+    <div class="support-grid">
+      <a class="support-card" href="https://api.whatsapp.com/message/57TSTYVN3SMGE1" target="_blank" rel="noopener">
+        <span class="support-icon">💬</span>
+        <span class="support-text"><strong>FALAR COM O SUPORTE</strong><span>WhatsApp</span></span>
+      </a>
+      <a class="support-card" href="mailto:contato@lumiieduca.com.br">
+        <span class="support-icon">✉️</span>
+        <span class="support-text"><strong>contato@lumiieduca.com.br</strong><span>E-mail</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 17 — ÚLTIMA CHAMADA -->
+<section class="section closing">
+  <div class="container">
+    <h2>Você não precisa torcer para nunca pegar uma turma difícil.</h2>
+    <p>Você pode se preparar para quando ela chegar.</p>
+    <p>Para aquela turma que ninguém quer pegar.</p>
+    <p>Para o aluno que ninguém sabe mais como abordar.</p>
+    <p>Para o comportamento que faz você pensar:</p>
+
+    <div class="quote-card"><p>"E agora, o que eu faço?"</p></div>
+
+    <p>Com o Guia do Comportamento na Sala de Aula, você constrói o repertório para conduzir seus alunos, encontrar outros caminhos quando precisar e entrar em sala com muito mais segurança.</p>
+    <p class="bold" style="color:var(--paper);">Entre em qualquer turma sabendo que você vai conseguir lidar com ela.</p>
+
+    <figure>
+      <img src="Fotos/IDV - Guia Do Comportamento3.webp" alt="Guia do Comportamento na Sala de Aula: mockup do curso, PDFs e Grupo VIP" style="width:100%;height:auto;" loading="lazy">
+    </figure>
+
+    <h3 style="color:var(--paper);">Guia do Comportamento na Sala de Aula</h3>
+    <div class="price-mini">
+      <span class="price-mini-value">R$ 97 à vista</span>
+      <span class="price-mini-alt">ou 12x de R$ 10,03</span>
+    </div>
+
+    <div class="check-list">
+      <div class="check-item" style="color:var(--paper);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Acesso imediato</span></div>
+      <div class="check-item" style="color:var(--paper);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Acesso vitalício</span></div>
+      <div class="check-item" style="color:var(--paper);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>7 dias de garantia</span></div>
+    </div>
+
+    <div class="cta-wrap"><a href="https://checkout.payt.com.br/aaa58b42aa6473d9c637ff7b37ededed" class="btn-cta">QUERO ESTAR PREPARADA PARA QUALQUER TURMA</a></div>
+  </div>
+</section>
+
+<!-- DOBRA 18 — RODAPÉ -->
+<footer>
+  <div class="container">
+    <p>Ser Hena e Aeliss LTDA © 2026 — Todos os direitos reservados</p>
+    <p>CNPJ: 68.702.914/0001-38</p>
+    <p class="foot-links"><a href="#">Termos de Uso</a> • <a href="#">Política de Privacidade</a> • <a href="#">Contato e Suporte</a></p>
+    <p>Este produto é destinado à formação e ao desenvolvimento profissional de educadores. Os resultados e a aplicação das estratégias podem variar de acordo com o contexto, os alunos e a realidade de cada turma.</p>
+  </div>
+</footer>
+
+<!-- STICKY CTA MOBILE -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-price"><span class="val">R$ 97 à vista</span><span class="alt">ou 12x de R$ 10,03</span></div>
+  <a href="https://checkout.payt.com.br/aaa58b42aa6473d9c637ff7b37ededed" class="btn-cta">QUERO ESTAR PREPARADA</a>
+</div>
+
+<script>
+  // Sticky CTA só aparece a partir da seção de oferta (nenhum CTA antes dela)
+  (function(){
+    var sticky = document.getElementById('stickyCta');
+    var oferta = document.getElementById('oferta');
+    if(!sticky || !oferta) return;
+    var ticking = false;
+    function update(){
+      ticking = false;
+      var reached = oferta.getBoundingClientRect().top <= 0;
+      sticky.classList.toggle('is-visible', reached);
+    }
+    window.addEventListener('scroll', function(){
+      if(!ticking){ requestAnimationFrame(update); ticking = true; }
+    }, {passive:true});
+    update();
+  })();
+
+  // Contador regressivo (evergreen, reinicia a cada expiração)
+  (function(){
+    var DURATION = 15*60*1000; // 15 minutos
+    var KEY = 'guiaComportamentoDeadline';
+    function loadDeadline(){
+      try{ return parseInt(localStorage.getItem(KEY), 10); }catch(e){ return NaN; }
+    }
+    function saveDeadline(v){
+      try{ localStorage.setItem(KEY, v); }catch(e){ /* storage indisponível: segue só em memória */ }
+    }
+    var deadline = loadDeadline();
+    if(!deadline || isNaN(deadline) || deadline < Date.now()){
+      deadline = Date.now() + DURATION;
+      saveDeadline(deadline);
+    }
+    var elH = document.getElementById('cd-h');
+    var elM = document.getElementById('cd-m');
+    var elS = document.getElementById('cd-s');
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function tick(){
+      var diff = deadline - Date.now();
+      if(diff <= 0){
+        deadline = Date.now() + DURATION;
+        saveDeadline(deadline);
+        diff = DURATION;
+      }
+      var h = Math.floor(diff/3600000);
+      var m = Math.floor((diff%3600000)/60000);
+      var s = Math.floor((diff%60000)/1000);
+      if(elH) elH.textContent = pad(h);
+      if(elM) elM.textContent = pad(m);
+      if(elS) elS.textContent = pad(s);
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+</script>
+
+</body>
+</html>
