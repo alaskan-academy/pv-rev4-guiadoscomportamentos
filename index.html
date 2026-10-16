@@ -73,7 +73,28 @@
 <!-- Rastreamento proprio (track.lumiieduca.com.br) -->
 <!-- O produto e o code da Payt, nao um apelido: e por ele que o sistema
      decide para qual pixel a conversao vai. -->
-<script>window.TRACK_CONFIG={produto:"RAOJGY",pixel:true}</script>
+<!-- `banner:false` — decisao dela em 16/10/2026.
+
+     O aviso de cookies subiu nesta pagina hoje de manha e sai hoje a
+     tarde. Nao e obstrucao: e voltar ao estado de ontem, que e o mesmo em
+     que a decisao de LEGITIMO INTERESSE foi tomada em 13/10 — e um dos
+     argumentos daquela decisao foi, textualmente, que "a pagina nunca teve
+     banner".
+
+     O que SUSTENTA isso, e sem o que nao daria para fazer: a saida
+     continua existindo e alcancavel. O rodape desta pagina linka
+     "Politica de Privacidade" -> track.lumiieduca.com.br/privacidade, e la
+     estao os botoes de recusa, que gravam cookie no dominio pai e valem
+     para todo o lumiieduca.com.br. Conferido no ar antes de desligar.
+
+     SE O LINK DO RODAPE SUMIR, o banner tem de voltar: sem ele nao sobra
+     caminho nenhum para a pessoa se opor, e ai o legitimo interesse cai.
+
+     O padrao do `track.js` continua LIGADO de proposito: pagina nova nasce
+     com aviso, e desliga-lo e uma decisao explicita, por pagina. O
+     contrario faria uma pagina futura nascer sem nada e sem ninguem
+     perceber. -->
+<script>window.TRACK_CONFIG={produto:"RAOJGY",pixel:true,banner:false}</script>
 <script src="https://track.lumiieduca.com.br/track.js" defer></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
