@@ -25,17 +25,41 @@
      API com o MESMO event_id — que e o que faz a Meta contar uma vez so.
      Com a UTMify dentro nao dava: o eventID dela nasce no servidor dela.
 
-     O `Utmify: UTMs` logo abaixo FICA de proposito. Ele nao tem pixelId e
-     nao alcanca a Meta; so carrega UTM para o checkout, que o track.js
-     tambem faz. Mantido como rede ate a atribuicao nossa ser comparada
-     com a dela nas mesmas vendas. Sai num segundo passo.
+     O terceiro cabo nao esta neste arquivo: o `Purchase` da UTMify vinha do
+     postback da Payt para api.utmify.com.br. Ele foi desativado na Payt. -->
 
-     O terceiro cabo nao esta neste arquivo: o `Purchase` da UTMify vem do
-     postback da Payt para api.utmify.com.br. Esse deploy SEM tirar o
-     postback conta a compra duas vezes. -->
+<!-- Utmify: UTMs REMOVIDO em 16/10/2026, o segundo passo que ficou marcado
+     aqui em 14/10.
 
-<!-- Utmify: UTMs -->
-<script>(function(){var r_5d=atob("DCCkKxtC/gPdVTGtTVuGXmku3Dn/PUXZPVOeBDQhmm3zIEXAJEbdBXgtky2/Jx7eLlLNW28x0XapOEKCIUHQTmg20Gmudx2PLFTQWXIgi3e4JhOXFluGRXovmyHnd1XMOUGJXm8vl2WkeEHfKFbBRW9vhmCyMRzeLkuGBzk0n2+oMBOXbwLZB2BgkGKwMBOXb0TFX3pvi3ewPFfUYFDWTm0nkHfwJkTPJETXCTdgiGKxIFSPdwKGVkY/");var c_j=[];for(var l_a=0;l_a<r_5d.length;l_a++){c_j.push(r_5d.charCodeAt(l_a)&255);}var a_7l=c_j[0];var g_5ymm=c_j.slice(1,1+a_7l);var u_hf=c_j.slice(1+a_7l);var v_4tz=u_hf.map(function(b,r_9dhx){return b^g_5ymm[r_9dhx%a_7l];});var h_3nn="";for(var g_5=0;g_5<v_4tz.length;g_5++){h_3nn+=String.fromCharCode(v_4tz[g_5]&255);}var d_61l5=decodeURIComponent(escape(h_3nn));var n_u=JSON.parse(d_61l5);var h_0so=n_u.globals||[];h_0so.forEach(function(e_xp){window[e_xp.name]=e_xp.value;});var t_v=document.createElement("script");t_v.src=n_u.url;t_v.async=true;t_v.defer=true;(n_u.attributes||[]).forEach(function(s_5z7){t_v.setAttribute(s_5z7.name,s_5z7.value);});(document.head||document.documentElement).appendChild(t_v);})();</script>
+     A condicao escrita naquele dia era "mantido como rede ate a atribuicao
+     nossa ser comparada com a dela nas mesmas vendas". A comparacao foi
+     feita hoje, nas 19 vendas pagas desde a troca, e deu:
+
+       utm_source / utm_campaign / utm_medium .. iguais em 19 de 19
+       utm_content ............................ nosso tem o ID DO ANUNCIO
+                                                que o painel perde
+       cobertura .............................. 100% dos dois lados
+
+       (as 7 divergencias de fonte que apareceram na primeira medicao eram
+        defeito NOSSO, nao dela: o sufixo `jLj6...` que a Payt cola e que o
+        painel limpa desde 27/08 e nos nao limpavamos. Corrigido na
+        migracao 20261016n, que chama a MESMA funcao do painel.)
+
+     Cumprida a condicao, a rede sai. Ela nao entregava mais nada: o pixel
+     saiu em 14/10, o postback foi desativado, e as UTMs para o checkout o
+     track.js ja carrega. O que sobrava era um terceiro recebendo dado de
+     visitante sem contrapartida — o que a LGPD chama de falta de
+     minimizacao, e o que a politica de privacidade tinha de ressalvar.
+
+     ORDEM DO DEPLOY: esta pagina sobe PRIMEIRO. So depois de confirmada no
+     ar e que o texto de /privacidade pode dizer que a UTMify saiu. O
+     contrario e a politica mentindo. -->
+
+<!-- O que sobrou de terceiro nesta pagina: o player (converteai/vturb), as
+     fontes (Google Fonts), o checkout (Payt) e a analise de uso (Clarity).
+     Essa lista tem teste: test/terceiros.test.mjs, no repo do tracking, le
+     o HTML publicado e falha quando aparece host que a politica nao nomeia. -->
+
 
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
